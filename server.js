@@ -11,7 +11,8 @@ app.use('/api/post', require('./routes/post.routes'))
 async function start() {
   try {
     await mongoose.connect(
-      process.env.MONGODB_URL,
+      // process.env.MONGODB_URL,
+      'mongodb+srv://ali:123@cluster0.pwaen10.mongodb.net/post?retryWrites=true&w=majority',
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
